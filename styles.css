@@ -77,3 +77,24 @@ textarea:-webkit-autofill:focus {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
 }
+
+/* Mobile-first tweaks */
+@media (max-width: 640px) {
+  .photo-ring img {
+    max-width: 14rem;
+    max-height: 14rem;
+  }
+}
+
+/* Prevent long contact text overflow */
+.contact-btn p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Smooth focus states for mobile */
+input:focus,
+textarea:focus {
+  outline: none;
+}
