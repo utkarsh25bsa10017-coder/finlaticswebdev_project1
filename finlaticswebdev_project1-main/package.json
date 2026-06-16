@@ -1,0 +1,13 @@
+{
+  "name": "utkarsh-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Utkarsh — qualifications, achievements, and hobbies",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "keywords": ["portfolio", "tailwind", "personal-website"],
+  "author": "Utkarsh"
+}
