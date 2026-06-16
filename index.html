@@ -1,58 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello AI Native Developer</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utkarsh — Portfolio</title>
 
-    body {
-      min-height: 100vh;
-      background-color: #2563eb;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      font-family: system-ui, -apple-system, sans-serif;
-      color: white;
-    }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              maroon: { DEFAULT: '#2a0a12', dark: '#1a0509', light: '#3d1220' },
+              gold: { DEFAULT: '#d4af37', light: '#f0d060' },
+              card: '#2a2a2a',
+            },
+            fontFamily: {
+              algerian: ['Algerian', 'serif'],
+              display: ['Orbitron', 'sans-serif'],
+              body: ['Rajdhani', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      text-align: center;
-    }
+  <body class="bg-maroon-dark text-white font-body antialiased">
 
-    button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #2563eb;
-      background-color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-maroon-dark/90 backdrop-blur-md border-b border-gold/10">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#hero" class="font-display text-xl font-semibold tracking-widest text-gold">
+          UTKARSH
+        </a>
 
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+        <ul class="flex gap-6 md:gap-10 text-sm md:text-base font-medium tracking-wide uppercase">
+          <li><a href="#about" class="nav-link text-gray-300 hover:text-gold transition-colors">About</a></li>
+          <li><a href="#qualification" class="nav-link text-gray-300 hover:text-gold transition-colors">Qualification</a></li>
+          <li><a href="#hobbies" class="nav-link text-gray-300 hover:text-gold transition-colors">Hobbies</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    button:active {
-      transform: translateY(0);
-    }
-  </style>
-</head>
-<body>
-  <h1>hello ai native developer</h1>
-  <button type="button" onclick="alert('Hello from the button!')">Click me</button>
-</body>
+    <!-- Hero -->
+    <section id="hero" class="min-h-screen flex items-center justify-center px-6 hero-grid relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-maroon-light/30 via-transparent to-maroon-dark pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center relative z-10 py-20">
+        <div class="order-2 md:order-1">
+          <p class="font-display text-gold/80 text-sm tracking-[0.3em] uppercase mb-4">
+            Portfolio
+          </p>
+
+          <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
+            Hi, I'm
+            <span class="text-gold block mt-1">Utkarsh</span>
+          </h1>
+
+          <p class="text-gray-400 text-lg md:text-xl leading-relaxed mb-4 max-w-lg">
+            Second-year student at <span class="text-white">VIT Bhopal</span>, driven by endurance, engineering, and the pursuit of excellence.
+          </p>
+
+          <p class="text-gray-500 text-base mb-10 max-w-lg">
+            Building skills in technology while pushing limits in sport and aerospace.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#qualification"
+              class="bg-gold/10 border border-gold/40 text-gold px-8 py-3 rounded-sm font-semibold tracking-wider uppercase text-sm hover:bg-gold/20 transition-all"
+            >
+              Qualifications
+            </a>
+            <a
+              href="#hobbies"
+              class="border border-gray-600 text-gray-300 px-8 py-3 rounded-sm font-semibold tracking-wider uppercase text-sm hover:border-gold/40 hover:text-gold transition-all"
+            >
+              Hobbies
+            </a>
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 flex justify-center">
+          <div class="photo-ring rounded-full shadow-glow">
+            <img
+              src="assets/utkarsh-profile.png"
+              alt="Utkarsh"
+              class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- About -->
+    <section id="about" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">01</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+          About Me
+        </h2>
+        <p class="text-gray-500 text-center mb-14 tracking-widest uppercase text-sm">Who I Am</p>
+
+        <div class="max-w-3xl mx-auto space-y-6 text-gray-300 text-lg leading-relaxed text-center">
+          <p>
+            I'm <span class="text-white font-semibold">Utkarsh</span>, a passionate and driven individual currently pursuing my undergraduate studies at
+            <span class="text-gold">VIT Bhopal</span>, where I am in my second year.
+          </p>
+          <p>
+            My journey began at <span class="text-white">St. Therese's School</span>, where I built a strong academic foundation. Beyond the classroom, I thrive on challenges — whether it's clocking miles on the track, building FPV race drones, or engineering automated aircraft with my team.
+          </p>
+          <p>
+            I believe in pushing boundaries, learning continuously, and representing my college on national stages. Right now, I'm focused on growing as a student, an engineer, and an athlete.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Qualification -->
+    <section id="qualification" class="py-24 px-6 bg-maroon/50">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">02</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+          Qualification
+        </h2>
+        <p class="text-gray-500 text-center mb-14 tracking-widest uppercase text-sm">Academic Journey</p>
+
+        <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="stat-card rounded-sm p-8 text-center">
+            <p class="font-display text-gold text-4xl font-bold mb-2">89%</p>
+            <h3 class="text-white font-semibold text-lg mb-1">Class 10th</h3>
+            <p class="text-gray-500 text-sm">St. Therese's School</p>
+          </div>
+
+          <div class="stat-card rounded-sm p-8 text-center">
+            <p class="font-display text-gold text-4xl font-bold mb-2">74%</p>
+            <h3 class="text-white font-semibold text-lg mb-1">Class 12th</h3>
+            <p class="text-gray-500 text-sm">St. Therese's School</p>
+          </div>
+
+          <div class="stat-card rounded-sm p-8 text-center md:col-span-1">
+            <p class="font-display text-gold text-lg font-bold mb-2 tracking-wider">2nd Year</p>
+            <h3 class="text-white font-semibold text-lg mb-1">Undergraduate</h3>
+            <p class="text-gray-500 text-sm">VIT Bhopal — Currently Studying</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Hobbies -->
+    <section id="hobbies" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">03</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+          Hobbies
+        </h2>
+        <p class="text-gray-500 text-center mb-14 tracking-widest uppercase text-sm">What I Do Beyond Studies</p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Running Card -->
+          <div class="hobby-card bg-card rounded-sm p-8 border border-gray-700/50">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 border border-gold/30 flex items-center justify-center rounded-sm">
+                <span class="font-display text-gold text-sm">01</span>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-white tracking-wide">
+                Endurance Running
+              </h3>
+            </div>
+
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Endurance sports are my passion. Running has taught me discipline, mental toughness, and the power of consistency. I push my limits on every run.
+            </p>
+
+            <div class="space-y-3 border-t border-gray-700/50 pt-6">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-500 text-sm uppercase tracking-wider">20 km</span>
+                <span class="font-display text-gold font-semibold">2 hr 9 min</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-500 text-sm uppercase tracking-wider">10 km</span>
+                <span class="font-display text-gold font-semibold">55 min</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drones & Aerospace Card -->
+          <div class="hobby-card bg-card rounded-sm p-8 border border-gray-700/50">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 border border-gold/30 flex items-center justify-center rounded-sm">
+                <span class="font-display text-gold text-sm">02</span>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-white tracking-wide">
+                FPV Drones & Aerospace
+              </h3>
+            </div>
+
+            <p class="text-gray-400 leading-relaxed mb-6">
+              I have hands-on experience building and flying FPV race drones. I also worked with
+              <span class="text-white">Team Vortex</span> of VIT Bhopal, where we engineered a Stage 4 automated plane that represented our college at
+              <span class="text-gold">SAE AeroDesign West</span>.
+            </p>
+
+            <div class="space-y-3 border-t border-gray-700/50 pt-6">
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-1">▸</span>
+                <span class="text-gray-400 text-sm">FPV race drone build & flight</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-1">▸</span>
+                <span class="text-gray-400 text-sm">Team Vortex — Stage 4 automated aircraft</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-1">▸</span>
+                <span class="text-gray-400 text-sm">SAE AeroDesign West representation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Motto -->
+    <footer class="py-20 px-6 border-t border-gold/10 bg-maroon-dark">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="font-algerian text-4xl md:text-6xl text-gold tracking-wider">
+          WHO DARES WINS
+        </p>
+        <p class="text-gray-600 text-sm mt-6 tracking-widest uppercase">
+          &copy; 2026 Utkarsh
+        </p>
+      </div>
+    </footer>
+
+  </body>
 </html>
