@@ -8,7 +8,8 @@ A futuristic, minimal personal portfolio built for project certification. Showca
 - **About** — Personal introduction and background
 - **Qualification** — Class 10th (89%), Class 12th (74%) from St. Therese's School, and current studies at VIT Bhopal
 - **Hobbies** — Two dark grey cards covering endurance running and FPV drones / aerospace engineering
-- **Navigation** — Sticky top menu linking to About, Qualification, and Hobbies
+- **Contact** — Contact details and a mailto contact form
+- **Navigation** — Sticky top menu linking to About, Qualification, Hobbies, and Contact
 - **Footer** — "WHO DARES WINS" motto in golden Algerian font
 - **Responsive Design** — Mobile-friendly layout using Tailwind CSS
 
