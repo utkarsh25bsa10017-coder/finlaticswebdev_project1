@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utkarsh — Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              maroon: { DEFAULT: '#2a0a12', dark: '#1a0509', light: '#3d1220' },
+              gold: { DEFAULT: '#d4af37', light: '#f0d060' },
+              card: '#2a2a2a',
+            },
+            fontFamily: {
+              algerian: ['Algerian', 'serif'],
+              display: ['Orbitron', 'sans-serif'],
+              body: ['Rajdhani', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-maroon-dark text-white font-body antialiased">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-maroon-dark/90 backdrop-blur-md border-b border-gold/10">
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <a href="#hero" class="font-display text-lg sm:text-xl font-semibold tracking-widest text-gold">
+          UTKARSH
+        </a>
+
+        <button id="menu-btn" class="md:hidden text-gold focus:outline-none" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <ul id="nav-links" class="hidden md:flex gap-6 lg:gap-10 text-sm font-medium tracking-wide uppercase">
+          <li><a href="#about" class="nav-link text-gray-300 hover:text-gold transition-colors">About</a></li>
+          <li><a href="#qualification" class="nav-link text-gray-300 hover:text-gold transition-colors">Qualification</a></li>
+          <li><a href="#projects" class="nav-link text-gray-300 hover:text-gold transition-colors">Projects</a></li>
+          <li><a href="#contact" class="nav-link text-gray-300 hover:text-gold transition-colors">Contact</a></li>
+        </ul>
+      </nav>
+
+      <ul id="mobile-menu" class="hidden md:hidden border-t border-gold/10 px-4 py-4 space-y-3 text-sm font-medium tracking-wide uppercase">
+        <li><a href="#about" class="block text-gray-300 hover:text-gold py-2">About</a></li>
+        <li><a href="#qualification" class="block text-gray-300 hover:text-gold py-2">Qualification</a></li>
+        <li><a href="#projects" class="block text-gray-300 hover:text-gold py-2">Projects</a></li>
+        <li><a href="#contact" class="block text-gray-300 hover:text-gold py-2">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 hero-grid relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-maroon-light/30 via-transparent to-maroon-dark pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto w-full relative z-10 py-20">
+        <div class="flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-14 lg:gap-20 md:justify-start md:pl-4 lg:pl-8">
+
+          <div class="flex-shrink-0 order-1 md:order-1">
+            <div class="photo-ring rounded-full shadow-glow">
+              <img
+                src="assets/utkarsh-profile.png"
+                alt="Utkarsh"
+                class="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover rounded-full"
+              />
+            </div>
+          </div>
+
+          <div class="order-2 md:order-2 text-center md:text-left max-w-xl">
+            <p class="font-display text-gold/80 text-xs sm:text-sm tracking-[0.3em] uppercase mb-3">
+              Portfolio
+            </p>
+
+            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-5">
+              Hi, I'm
+              <span class="text-gold block mt-1">Utkarsh</span>
+            </h1>
+
+            <p class="text-gray-400 text-base sm:text-lg leading-relaxed mb-3">
+              Second-year student at <span class="text-white">VIT Bhopal</span>, driven by endurance, engineering, and the pursuit of excellence.
+            </p>
+
+            <p class="text-gray-500 text-sm sm:text-base mb-8">
+              Building skills in technology while pushing limits in sport and aerospace.
+            </p>
+
+            <div class="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">
+              <a
+                href="#about"
+                class="bg-gold/10 border border-gold/40 text-gold px-6 sm:px-8 py-2.5 sm:py-3 rounded-sm font-semibold tracking-wider uppercase text-xs sm:text-sm hover:bg-gold/20 transition-all"
+              >
+                About Me
+              </a>
+              <a
+                href="#projects"
+                class="border border-gray-600 text-gray-300 px-6 sm:px-8 py-2.5 sm:py-3 rounded-sm font-semibold tracking-wider uppercase text-xs sm:text-sm hover:border-gold/40 hover:text-gold transition-all"
+              >
+                Projects
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- About -->
+    <section id="about" class="py-20 sm:py-24 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">01</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+          About Me
+        </h2>
+        <p class="text-gray-500 text-center mb-12 sm:mb-14 tracking-widest uppercase text-sm">Who I Am</p>
+
+        <div class="max-w-3xl mx-auto space-y-5 text-gray-300 text-base sm:text-lg leading-relaxed text-center mb-12">
+          <p>
+            I'm <span class="text-white font-semibold">Utkarsh</span>, a passionate and driven individual currently pursuing my undergraduate studies at
+            <span class="text-gold">VIT Bhopal</span>, where I am in my second year.
+          </p>
+          <p>
+            My journey began at <span class="text-white">St. Therese's School</span>, where I completed Class 10th with 89% and Class 12th with 74%, building a strong academic foundation along the way.
+          </p>
+          <p>
+            Beyond the classroom, I thrive on challenges — whether it's clocking miles on the track, building FPV race drones, or engineering automated aircraft with my team. I believe in pushing boundaries, learning continuously, and representing my college on national stages.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <!-- Hobbies info card -->
+          <div class="info-card bg-card rounded-sm p-6 sm:p-8 border border-gray-700/50">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 border border-gold/30 flex items-center justify-center rounded-sm flex-shrink-0">
+                <span class="font-display text-gold text-sm">01</span>
+              </div>
+              <h3 class="font-display text-lg sm:text-xl font-semibold text-white tracking-wide">
+                Endurance Running
+              </h3>
+            </div>
+
+            <p class="text-gray-400 leading-relaxed mb-5 text-sm sm:text-base">
+              Endurance sports are my passion. Running has taught me discipline, mental toughness, and the power of consistency.
+            </p>
+
+            <div class="space-y-3 border-t border-gray-700/50 pt-5">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-500 text-xs sm:text-sm uppercase tracking-wider">20 km</span>
+                <span class="font-display text-gold font-semibold text-sm sm:text-base">2 hr 9 min</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-500 text-xs sm:text-sm uppercase tracking-wider">10 km</span>
+                <span class="font-display text-gold font-semibold text-sm sm:text-base">55 min</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Current pursuits info card -->
+          <div class="info-card bg-card rounded-sm p-6 sm:p-8 border border-gray-700/50">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 border border-gold/30 flex items-center justify-center rounded-sm flex-shrink-0">
+                <span class="font-display text-gold text-sm">02</span>
+              </div>
+              <h3 class="font-display text-lg sm:text-xl font-semibold text-white tracking-wide">
+                What I'm Doing Now
+              </h3>
+            </div>
+
+            <p class="text-gray-400 leading-relaxed mb-5 text-sm sm:text-base">
+              Currently focused on my second year at VIT Bhopal while actively pursuing my interests in aerospace engineering and endurance athletics.
+            </p>
+
+            <div class="space-y-3 border-t border-gray-700/50 pt-5">
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">Undergraduate studies at VIT Bhopal</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">Building & flying FPV race drones</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">Training for endurance running events</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Qualification -->
+    <section id="qualification" class="py-20 sm:py-24 px-4 sm:px-6 bg-maroon/50">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">02</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+          Qualification
+        </h2>
+        <p class="text-gray-500 text-center mb-12 sm:mb-14 tracking-widest uppercase text-sm">Academic Journey</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
+          <div class="stat-card rounded-sm p-6 sm:p-8 text-center">
+            <p class="font-display text-gold text-3xl sm:text-4xl font-bold mb-2">89%</p>
+            <h3 class="text-white font-semibold text-base sm:text-lg mb-1">Class 10th</h3>
+            <p class="text-gray-500 text-sm">St. Therese's School</p>
+          </div>
+
+          <div class="stat-card rounded-sm p-6 sm:p-8 text-center">
+            <p class="font-display text-gold text-3xl sm:text-4xl font-bold mb-2">74%</p>
+            <h3 class="text-white font-semibold text-base sm:text-lg mb-1">Class 12th</h3>
+            <p class="text-gray-500 text-sm">St. Therese's School</p>
+          </div>
+
+          <div class="stat-card rounded-sm p-6 sm:p-8 text-center sm:col-span-2 md:col-span-1">
+            <p class="font-display text-gold text-base sm:text-lg font-bold mb-2 tracking-wider">2nd Year</p>
+            <h3 class="text-white font-semibold text-base sm:text-lg mb-1">Undergraduate</h3>
+            <p class="text-gray-500 text-sm">VIT Bhopal — Currently Studying</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 sm:py-24 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">03</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+          Projects
+        </h2>
+        <p class="text-gray-500 text-center mb-12 sm:mb-14 tracking-widest uppercase text-sm">Engineering & Aerospace</p>
+
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <!-- FPV Drones -->
+          <div class="info-card bg-card rounded-sm p-6 sm:p-8 border border-gray-700/50">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 border border-gold/30 flex items-center justify-center rounded-sm flex-shrink-0">
+                <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+              </div>
+              <h3 class="font-display text-lg sm:text-xl font-semibold text-white tracking-wide">
+                FPV Race Drones
+              </h3>
+            </div>
+
+            <p class="text-gray-400 leading-relaxed mb-5 text-sm sm:text-base">
+              Hands-on experience in building and flying FPV (First Person View) race drones — from frame assembly and electronics wiring to flight tuning and piloting.
+            </p>
+
+            <div class="space-y-3 border-t border-gray-700/50 pt-5">
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">Custom drone frame builds</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">Flight controller & ESC configuration</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">FPV goggle piloting & race tuning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Vortex -->
+          <div class="info-card bg-card rounded-sm p-6 sm:p-8 border border-gray-700/50">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 border border-gold/30 flex items-center justify-center rounded-sm flex-shrink-0">
+                <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                </svg>
+              </div>
+              <h3 class="font-display text-lg sm:text-xl font-semibold text-white tracking-wide">
+                Team Vortex — SAE AeroDesign
+              </h3>
+            </div>
+
+            <p class="text-gray-400 leading-relaxed mb-5 text-sm sm:text-base">
+              Worked with <span class="text-white">Team Vortex</span> of VIT Bhopal to design and build a Stage 4 automated plane that represented our college at
+              <span class="text-gold">SAE AeroDesign West</span>.
+            </p>
+
+            <div class="space-y-3 border-t border-gray-700/50 pt-5">
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">Stage 4 automated aircraft design</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">Team collaboration at VIT Bhopal</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-gold mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-gray-400 text-sm">SAE AeroDesign West competition</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 sm:py-24 px-4 sm:px-6 bg-maroon/50">
+      <div class="max-w-3xl mx-auto">
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">04</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+          Contact Me
+        </h2>
+        <p class="text-gray-500 text-center mb-12 sm:mb-14 tracking-widest uppercase text-sm">Get In Touch</p>
+
+        <form class="space-y-5 sm:space-y-6" onsubmit="event.preventDefault();">
+          <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+            <div>
+              <label for="name" class="block text-gray-400 text-sm mb-2 uppercase tracking-wider">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+                class="w-full px-4 py-3 rounded-sm bg-card border border-gray-700/50 text-white placeholder-gray-600 focus:outline-none focus:border-gold/40 transition-colors"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-gray-400 text-sm mb-2 uppercase tracking-wider">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                class="w-full px-4 py-3 rounded-sm bg-card border border-gray-700/50 text-white placeholder-gray-600 focus:outline-none focus:border-gold/40 transition-colors"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="subject" class="block text-gray-400 text-sm mb-2 uppercase tracking-wider">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="What's this about?"
+              class="w-full px-4 py-3 rounded-sm bg-card border border-gray-700/50 text-white placeholder-gray-600 focus:outline-none focus:border-gold/40 transition-colors"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-gray-400 text-sm mb-2 uppercase tracking-wider">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Your message..."
+              required
+              class="w-full px-4 py-3 rounded-sm bg-card border border-gray-700/50 text-white placeholder-gray-600 focus:outline-none focus:border-gold/40 transition-colors resize-y"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full sm:w-auto bg-gold/10 border border-gold/40 text-gold px-10 py-3 rounded-sm font-semibold tracking-wider uppercase text-sm hover:bg-gold/20 transition-all"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 sm:py-20 px-4 sm:px-6 border-t border-gold/10 bg-maroon-dark">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="font-algerian text-3xl sm:text-4xl md:text-6xl text-gold tracking-wider">
+          WHO DARES WINS
+        </p>
+        <p class="text-gray-600 text-xs sm:text-sm mt-6 tracking-widest uppercase">
+          &copy; 2026 Utkarsh
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    </script>
+
+  </body>
+</html>

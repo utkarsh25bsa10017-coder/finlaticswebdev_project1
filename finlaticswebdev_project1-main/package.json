@@ -1,0 +1,12 @@
+{
+  "name": "utkarsh-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Utkarsh",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "author": "Utkarsh"
+}
